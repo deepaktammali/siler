@@ -14,7 +14,7 @@ Siler is a web crawler written in Go that explores websites starting from a seed
 
 ```bash
 
-git clone [repository-url]
+git clone [[repository-url]](https://github.com/deepaktammali/siler.git)
 
 cd siler
 

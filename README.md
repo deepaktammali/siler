@@ -13,19 +13,15 @@ Siler is a web crawler written in Go that explores websites starting from a seed
 1. Clone the repository:
 
 ```bash
-
 git clone https://github.com/deepaktammali/siler.git
 
 cd siler
-
 ```
 
 2. Install dependencies:
 
 ```bash
-
 go mod tidy
-
 ```
 
 ## Usage
@@ -33,21 +29,15 @@ go mod tidy
 Currently, the crawler uses a hardcoded starting URL (google.com). Run the crawler:
 
 ```bash
-
 go run .
-
 ```
 
 ## Project Structure
 
 - main.go - Entry point and crawling logic
-
 - types.go - Data structure definitions
-
 - set.go - Set implementation for collecting unique domains
-
 - helpers.go - HTML parsing and page processing utilities
-
 - constants.go - HTML constants
 
 
@@ -59,29 +49,19 @@ go run .
 #### SiteInfo
 
 ```go
-
 type SiteInfo struct {
-
     Url      string
-
     Metadata SiteMetadata
-
     Links    []string
-
 }
-
 ```
 
 #### SiteMetadata
 
 ```go
-
 type SiteMetadata struct {
-
     Title string
-
 }
-
 ```
 
 ## Current Status

@@ -2,11 +2,9 @@
 
 Siler is a web crawler written in Go that explores websites starting from a seed URL and gathers basic metadata and links.
 
-
 ## Prerequisites
 
 - Go 1.23.3 or higher
-
 
 ## Installation
 
@@ -26,11 +24,19 @@ go mod tidy
 
 ## Usage
 
-Currently, the crawler uses a hardcoded starting URL (google.com). Run the crawler:
+Run the crawler:
 
 ```bash
-go run .
+go run *.go --website=https://www.google.com --depth=3
 ```
+
+This runs in headless mode to see the browser. add -rod=show.
+
+```bash
+go run *.go -rod=show --website=https://www.google.com --depth=3
+```
+
+Output is generated under output folder
 
 ## Project Structure
 
@@ -39,8 +45,6 @@ go run .
 - set.go - Set implementation for collecting unique domains
 - helpers.go - HTML parsing and page processing utilities
 - constants.go - HTML constants
-
-
 
 ## Current Implementation
 
@@ -63,9 +67,3 @@ type SiteMetadata struct {
     Title string
 }
 ```
-
-## Current Status
-
-- [x] Fetch site info for a single site
-- [ ] Take the site url from the CLI argument
-- [ ] Follow the links from the site and collect information about links upto a certain depth
